@@ -14,7 +14,7 @@
       "destination": "https://find-cats-nine.vercel.app/"
     },
     {
-      "source": "/find-cats/:path",
+      "source": "/find-cats/:path*",
       "destination": "https://find-cats-nine.vercel.app/:path*"
     }
   ]
