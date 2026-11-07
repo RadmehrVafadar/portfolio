@@ -8,6 +8,14 @@
     {
       "source": "/youlobme/:path*",
       "destination": "https://youlobme.vercel.app/:path*"
+    },
+    {
+      "source": "/find-cats",
+      "destination": "https://find-cats-nine.vercel.app/*"
+    },
+    {
+      "source": "/find-cats/:path*",
+      "destination": "https://find-cats-nine.vercel.app/:path*"
     }
   ]
 }
