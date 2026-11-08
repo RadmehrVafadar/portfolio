@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A visual history of Rad's arcade portfolio, from the first cabinet in 2024 to a playable project museum." />
+    <meta name="theme-color" content="#0b0c0f" />
+    <title>Changelog | Rad's Arcade</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#changes">Skip to changes</a>
+    <header class="site-header">
+      <a class="site-name" href="/">Rad's Arcade</a>
+      <nav aria-label="Site">
+        <a href="/">Play</a>
+        <a href="https://github.com/RadmehrVafadar/ArcadeEnv">Source</a>
+      </nav>
+    </header>
+
+    <main id="changes" tabindex="-1">
+      <div class="intro">
+        <h1>Changelog</h1>
+        <p>A cabinet, a portfolio, and a few detours along the way.<br class="wide-only" /> The bigger changes, with pictures.</p>
+      </div>
+
+      <nav class="years" aria-label="Jump to year">
+        <a href="#2026">2026</a>
+        <a href="#2025">2025</a>
+        <a href="#2024">2024</a>
+      </nav>
+
+      <section aria-labelledby="2026">
+        <h2 class="year" id="2026">2026</h2>
+        <article aria-labelledby="more-games">
+          <div class="entry-date"><time datetime="2026-11-07">Nov 07</time></div>
+          <div class="entry-body">
+            <h3 id="more-games">A couple more games</h3>
+            <p>Find Cats joined You Lob Me under the portfolio's domain, with direct routes for both games.</p>
+            <p>The cabinet below is where the project stands today.</p>
+            <figure>
+              <img src="../../../docs/images/changelog/arcade.png" alt="The current arcade cabinet under an overhead spotlight, with the portfolio on its screen and an amber Play sign beside it." width="1280" height="800" fetchpriority="high" />
+              <figcaption>Current cabinet, captured from the November 7 revision.</figcaption>
+            </figure>
+            <a class="source-link" href="https://github.com/RadmehrVafadar/ArcadeEnv/commit/b7db760b99c55cd4373d494d69e5cc7383f0938b">Source commit: b7db760</a>
+          </div>
+        </article>
+
+        <article aria-labelledby="museum">
+          <div class="entry-date"><time datetime="2026-10-30">Oct 30</time></div>
+          <div class="entry-body">
+            <h3 id="museum">Back to the hallway</h3>
+            <p>The project showcase became an editable pixel museum. The original hallway returned as modular artwork, with a burgundy runner, wall lamps, and six exhibits to walk between.</p>
+            <p>Descriptions now appear as you approach. The map, furniture, and collision footprints are authored in Tiled.</p>
+            <figure>
+              <img src="../../../docs/images/changelog/museum.png" alt="The pixel museum's wooden hallway, burgundy carpet, grey entrance door, wall lamps, and visitor character." width="1280" height="720" loading="lazy" />
+              <figcaption>Screenshot preserved with the October 30 museum update.</figcaption>
+            </figure>
+            <a class="source-link" href="https://github.com/RadmehrVafadar/ArcadeEnv/commit/e4cb709b0f11ae96200007fa4c0d791d63c6d4a5">Source commit: e4cb709</a>
+          </div>
+        </article>
+
+        <article aria-labelledby="punch-out">
+          <div class="entry-date"><time datetime="2026-10-29">Oct 29</time></div>
+          <div class="entry-body">
+            <h3 id="punch-out">An arcade that plays Punch-Out</h3>
+            <p>Mike Tyson's Punch-Out!! became playable from an exhibit, inside the same cabinet screen. The joystick and action buttons feed an NES emulator, and returning to the museum restores your position.</p>
+            <figure>
+              <img src="../../../docs/images/changelog/punch-out.png" alt="Punch-Out gameplay running inside the arcade cabinet's CRT screen." width="1280" height="900" loading="lazy" />
+              <figcaption>Gameplay capture preserved during development of the Punch-Out integration.</figcaption>
+            </figure>
+            <a class="source-link" href="https://github.com/RadmehrVafadar/ArcadeEnv/commit/374b81a3373d6a58d7cf6fe4f027e5564c7e05e7">Source commit: 374b81a</a>
+          </div>
+        </article>
+
+        <article aria-labelledby="controls">
+          <div class="entry-date"><time datetime="2026-10-24">Oct 24</time></div>
+          <div class="entry-body">
+            <h3 id="controls">The controls became real</h3>
+            <p>The modeled joystick and buttons started controlling the portfolio: moving through the showcase, choosing menu links, and navigating the blog. Keyboard presses animate the hardware too.</p>
+            <p>Synthesized button clicks and joystick blips followed, with touch audio support and a Sound FX toggle. Background music arrived in the same update and was disabled on November 1.</p>
+            <p class="sources">
+              <a class="source-link" href="https://github.com/RadmehrVafadar/ArcadeEnv/commit/20e3f45f97ce754038a799d879654592f0561dd4">Controls: 20e3f45</a>
+              <a class="source-link" href="https://github.com/RadmehrVafadar/ArcadeEnv/commit/3013ebd2ca604301d17e77c316e3a27c51a38378">Audio: 3013ebd</a>
+            </p>
+          </div>
+        </article>
+
+        <article aria-labelledby="spotlight">
+          <div class="entry-date"><time datetime="2026-10-21">Oct 21</time></div>
+          <div class="entry-body">
+            <h3 id="spotlight">Just the cabinet, in the spotlight</h3>
+            <p>The clouds and floating cubes gave way to a quieter scene. A theatrical spotlight, CRT glass, scanlines, and an amber Play sign put the cabinet first.</p>
+            <p>A loading screen and automatic camera zoom made entering the arcade work on phones too.</p>
+            <figure>
+              <img src="../../../docs/images/changelog/spotlight.png" alt="The October arcade cabinet with its original button layout, overhead lighting, and neon Play sign." width="1280" height="800" loading="lazy" />
+              <figcaption>Recreated from the October 21 source, before the controls were rebuilt.</figcaption>
+            </figure>
+            <a class="source-link" href="https://github.com/RadmehrVafadar/ArcadeEnv/commit/f6bf203ea23802a5557464b697d37d3f2bc58912">Source commit: f6bf203</a>
+          </div>
+        </article>
+
+        <article aria-labelledby="portfolio">
+          <div class="entry-date"><time datetime="2026-10-19">Oct 19</time></div>
+          <div class="entry-body">
+            <h3 id="portfolio">The portfolio moved in</h3>
+            <p>The arcade and portfolio joined one npm workspace. The cabinet, landing page, project showcase, and resume could finally run and deploy together.</p>
+            <figure>
+              <img src="../../../docs/images/changelog/original-showcase.png" alt="The original pixel-art project showcase imported with the portfolio, before the editable museum rebuild." width="1280" height="800" loading="lazy" />
+              <figcaption>The original showcase, recreated from the portfolio merge.</figcaption>
+            </figure>
+            <a class="source-link" href="https://github.com/RadmehrVafadar/ArcadeEnv/commit/d6b868afcd82a593d1456761fa0cdadc61bcfce6">Source commit: d6b868a</a>
+          </div>
+        </article>
+      </section>
+
+      <section aria-labelledby="2025">
+        <h2 class="year" id="2025">2025</h2>
+        <article aria-labelledby="clouds">
+          <div class="entry-date"><time datetime="2025-09-09">Sep 09</time></div>
+          <div class="entry-body">
+            <h3 id="clouds">Clouds, shadows, and a live portfolio</h3>
+            <p>Magenta clouds and a ground plane gave the cabinet an atmosphere. The screen pointed to the live portfolio, with touch camera interaction added alongside desktop hover.</p>
+            <figure>
+              <img src="../../../docs/images/changelog/cloud-scene.png" alt="The 2025 arcade scene with magenta clouds, floating textured cubes, and the original cabinet." width="1280" height="800" loading="lazy" />
+              <figcaption>Recreated from the September 9 source. The external screen is left blank.</figcaption>
+            </figure>
+            <a class="source-link" href="https://github.com/RadmehrVafadar/ArcadeEnv/commit/6745b965072355844936800477a49266fc530bf4">Source commit: 6745b96</a>
+          </div>
+        </article>
+      </section>
+
+      <section aria-labelledby="2024">
+        <h2 class="year" id="2024">2024</h2>
+        <article aria-labelledby="react">
+          <div class="entry-date"><time datetime="2024-04-04">Apr 04</time></div>
+          <div class="entry-body">
+            <h3 id="react">React, hover zoom, and floating cubes</h3>
+            <p>The scene moved to React Three Fiber. Hovering the cabinet brought the camera closer, and two textured cubes floated beside the machine.</p>
+            <figure>
+              <img src="../../../docs/images/changelog/floating-cubes.png" alt="The early React Three Fiber arcade, flanked by two floating textured cubes on a dark background." width="1280" height="800" loading="lazy" />
+              <figcaption>Recreated from the April 4 source. The third-party screen is left blank.</figcaption>
+            </figure>
+            <a class="source-link" href="https://github.com/RadmehrVafadar/ArcadeEnv/commit/24677418ca4525473df2ed4406125126990a4d44">Source commit: 2467741</a>
+          </div>
+        </article>
+
+        <article aria-labelledby="first-screen">
+          <div class="entry-date"><time datetime="2024-03-17">Mar 17</time></div>
+          <div class="entry-body">
+            <h3 id="first-screen">The first working screen</h3>
+            <p>A textured Blender cabinet, a Three.js scene, and a canvas mapped onto the display. The early prototype already had a camera animation triggered by clicking the machine.</p>
+            <figure>
+              <img src="../../../docs/images/changelog/first-screen.png" alt="The first Three.js prototype, showing the textured arcade machine and development grid with a canvas display." width="1280" height="800" loading="lazy" />
+              <figcaption>Recreated from the March 17 source. The first commit was March 11.</figcaption>
+            </figure>
+            <a class="source-link" href="https://github.com/RadmehrVafadar/ArcadeEnv/commit/b665fd9affd09218a13ab92dab740be4a5b36240">Source commit: b665fd9</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Selected changes, traced through the Git history.<br />Older scenes are recreated from their source; preserved screenshots are marked.</p>
+      <a href="#changes">Back to top</a>
+    </footer>
+  </body>
+</html>
