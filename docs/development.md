@@ -22,6 +22,7 @@ Root `.env.local` supplies arcade configuration, including `VITE_IFRAME_URL`.
 `npm run preview` serves that combined directory.
 Its proxy is explicitly empty so Vite preview cannot inherit the development portfolio proxy and accidentally serve source files instead of the assembled build.
 Deploy at the domain root with build command `npm run build` and output directory `dist/`.
+The arcade Vite build also includes the static `/changelog/` HTML entry and bundles its screenshots from `docs/images/changelog/`.
 Vercel and the retained `npm run deploy` gh-pages command use this combined output.
 Subdirectory deployment requires revisiting both route bases.
 
