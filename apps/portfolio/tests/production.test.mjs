@@ -25,6 +25,13 @@ test('production contains no ROM files or NES bytes', async () => {
   }
 });
 
+test('resume cross-reference offset survives binary copying', async () => {
+  const pdf = (await readFile(new URL('../public/RVafadar_Resume.pdf', import.meta.url))).toString('latin1');
+  const trailer = /startxref\s+(\d+)\s+%%EOF\s*$/.exec(pdf);
+  assert.ok(trailer, 'Missing final PDF trailer');
+  assert.match(pdf.slice(Number(trailer[1]), Number(trailer[1]) + 64), /^(?:xref\b|\d+\s+\d+\s+obj\b)/);
+});
+
 test('production includes every existing menu destination and the resume', async () => {
   for (const href of ['/portfolio/', '/portfolio/src/portfolio-game/game.html', '/portfolio/src/blog-website/blog.html', '/portfolio/src/punch-out/punch-out.html', '/portfolio/src/punch-out/runtime.html', '/portfolio/RVafadar_Resume.pdf']) {
     const response = await fetch(new URL(href, origin));

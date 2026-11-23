@@ -50,6 +50,8 @@ Software WebGL tests have scoped timeouts and run serially per CI shard.
 See the root [development guide](../../../docs/development.md) for runner, cache, and sharding details.
 
 Production HTTP checks verify every prefixed HTML entry and linked local script/style, plus exact resume PDF bytes.
+The resume test checks the final cross-reference offset to catch text conversion of the PDF.
+Reader navigation tests cover a held joystick while focus settles between the iframe and the cabinet.
 The menu, blog, fonts, downloads, override, and embedded navigation retain their existing coverage.
 Cabinet browser tests use real mouse and CDP multitouch to exercise joystick directions, release/cancellation, keyboard coexistence, focus handoff, re-entry, and cached history.
 They also cover menu selection, Z activation, blog scrolling, X parent navigation, physical key feedback, and projected control geometry.
