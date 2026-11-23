@@ -30,7 +30,7 @@
 
 .loading-content p {
   margin: 0 0 32px;
-  font: clamp(24px, 4vw, 40px)/1.5 'Arcade Interlaced', monospace;
+  font: clamp(15px, 5vw, 40px)/1.5 'Arcade Interlaced', monospace;
 }
 
 .loading-dots {
