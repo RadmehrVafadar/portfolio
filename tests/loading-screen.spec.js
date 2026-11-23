@@ -24,6 +24,9 @@ test('arcade loading screen covers deferred scene and model loading @webgl', asy
   try {
     await page.goto('/', { waitUntil: 'domcontentloaded' });
     const loading = page.getByRole('status');
+    const logo = page.getByRole('img', { name: 'Radmehr Vafadar' });
+    await expect(logo).toBeVisible();
+    await expect.poll(() => logo.evaluate(image => image.naturalWidth)).toBeGreaterThan(0);
     await expect(loading).toContainText('Loading arcade');
     await expect(loading).toBeVisible();
     await expect(page.locator('.loading-dots')).toHaveCSS('animation-name', 'none');

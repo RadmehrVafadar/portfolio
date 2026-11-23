@@ -21,6 +21,13 @@
   padding: 24px;
 }
 
+.loading-logo {
+  display: block;
+  width: min(48vw, 32vh, 240px);
+  height: auto;
+  margin: 0 auto 20px;
+}
+
 .loading-content p {
   margin: 0 0 32px;
   font: clamp(24px, 4vw, 40px)/1.5 'Arcade Interlaced', monospace;
