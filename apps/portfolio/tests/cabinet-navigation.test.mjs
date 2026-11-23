@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
+import { setTimeout as delay } from 'node:timers/promises';
 import { installCabinetNavigation } from '../src/cabinet-navigation.ts';
 
 function fixture({ article = false, defaultIndex = -1 } = {}) {
@@ -111,7 +112,7 @@ test('article directions scroll continuously, preserve held aliases, and stop on
     input.setDirection('stick', 'down');
     if (eventTarget === page.document) page.document.hidden = true;
     eventTarget.dispatchEvent(new Event(eventTarget === page ? 'blur' : 'visibilitychange'));
-    await Promise.resolve();
+    await delay(0);
     assert.equal(frames.size, 0, 'Blur and hidden pages stop scrolling');
   }
   page.document.hidden = false;
@@ -150,12 +151,12 @@ test('reader focus moving into the cabinet preserves held input; leaving the bro
   frame(0);
   const before = page.scrollY;
   page.dispatchEvent(new Event('blur'));
-  await Promise.resolve();
+  await delay(0);
   frame(16);
   assert.ok(page.scrollY > before, 'The physical joystick keeps scrolling across internal focus changes');
   page.parent.document.hasFocus = () => false;
   page.dispatchEvent(new Event('blur'));
-  await Promise.resolve();
+  await delay(0);
   assert.equal(frames.size, 0, 'Leaving the browser still releases held input');
 });
 
@@ -169,13 +170,13 @@ test('a transient unfocused parent during an internal focus handoff preserves th
   const before = page.scrollY;
   focused = false;
   page.dispatchEvent(new Event('blur'));
-  focused = true;
-  await Promise.resolve();
+  queueMicrotask(() => { focused = true; });
+  await delay(0);
   frame(16);
   assert.ok(page.scrollY > before, 'The internal handoff must not release the held joystick');
   focused = false;
   page.dispatchEvent(new Event('blur'));
-  await Promise.resolve();
+  await delay(0);
   assert.equal(frames.size, 0, 'A real browser focus loss still clears input');
 });
 
