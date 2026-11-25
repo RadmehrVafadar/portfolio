@@ -49,4 +49,5 @@ docs/            Workspace development and scene documentation
 
 - Before changing commands, dependencies, tests, or deployment, read [Development](docs/development.md).
 - Before changing scene assets, camera behavior, iframe integration, or styling, read [Scene](docs/scene.md).
+- Before updating changelog milestones or screenshots, read [Changelog](docs/changelog.md).
 - Before changing portfolio pages or controls, read its [instructions](apps/portfolio/AGENTS.md) and linked app docs.

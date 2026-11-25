@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Arcade Interlaced';
+  src: url('../../portfolio/src/assets/fonts/arcade-interlaced.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+  --ground: #0b0c0f;
+  --ink: #eee7dc;
+  --muted: #aaa59b;
+  --amber: #fcbd46;
+  --rule: #34312b;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--ink);
+  background: var(--ground);
+  line-height: 1.65;
+  scrollbar-color: #75664a var(--ground);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+::selection { color: var(--ground); background: var(--amber); }
+a { color: inherit; text-underline-offset: 0.25em; text-decoration-thickness: 1px; }
+a:hover { color: var(--amber); }
+a:focus-visible { outline: 2px solid var(--amber); outline-offset: 6px; }
+.site-header, main, footer { width: min(100% - 3rem, 67rem); margin-inline: auto; }
+.site-header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-block: 1.6rem; border-bottom: 1px solid var(--rule); }
+.site-name { color: var(--amber); font-family: 'Arcade Interlaced', monospace; font-size: 1.2rem; text-decoration: none; }
+.site-header nav { display: flex; gap: 1.5rem; }
+.site-header nav a { min-height: 44px; display: inline-flex; align-items: center; }
+.intro { padding-top: 4.2rem; }
+h1 { margin: 0; color: var(--amber); font: 400 clamp(1.5rem, 8.5vw, 4.4rem)/1.35 'Arcade Interlaced', monospace; overflow-wrap: anywhere; }
+.intro p { color: var(--muted); font-size: 1.15rem; margin-top: 1.2rem; max-width: 55ch; }
+.years { display: flex; gap: 1.8rem; padding-block: 1rem 2.5rem; }
+.years a { display: inline-flex; align-items: center; min-height: 44px; color: var(--amber); font-variant-numeric: tabular-nums; }
+.year { font: 400 1.5rem/1.4 'Arcade Interlaced', monospace; color: var(--amber); margin: 0; padding-top: 1.3rem; border-top: 1px solid var(--rule); scroll-margin-top: 1.5rem; }
+section + section { margin-top: 4rem; }
+article { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); column-gap: 2rem; margin-top: 2rem; }
+article + article { margin-top: 3.8rem; padding-top: 3.2rem; border-top: 1px solid var(--rule); }
+.entry-date { color: var(--muted); padding-top: 0.3rem; font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+h3 { font-size: 1.65rem; line-height: 1.35; font-weight: 600; margin: 0 0 1rem; text-wrap: balance; }
+.entry-body > p { max-width: 68ch; margin-block: 0 0.9rem; }
+figure { margin: 1.6rem 0 1rem; }
+figure img { width: 100%; height: auto; display: block; background: #181818; }
+figcaption { font-size: 0.82rem; line-height: 1.6; color: var(--muted); margin-top: 0.65rem; }
+.source-link { font-size: 0.85rem; color: var(--muted); display: inline-flex; align-items: center; min-height: 44px; }
+.sources { display: flex; flex-wrap: wrap; gap: 0 1.5rem; }
+footer { margin-top: 4.5rem; margin-bottom: 2rem; border-top: 1px solid var(--rule); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; color: var(--muted); font-size: 0.85rem; }
+footer p { margin: 0; }
+footer > a { white-space: nowrap; min-height: 44px; }
+.skip-link { position: absolute; left: 1rem; top: 0.5rem; z-index: 1; padding: 0.6rem 1rem; background: var(--amber); color: var(--ground); transform: translateY(-200%); }
+.skip-link:focus { transform: translateY(0); color: var(--ground); }
+.skip-link:hover { color: var(--ground); }
+main:focus { outline: none; }
+
+@media (max-width: 640px) {
+  .site-header, main, footer { width: calc(100% - 2.5rem); }
+  .site-header { align-items: flex-start; flex-wrap: wrap; }
+  .site-name { font-size: 1rem; padding-block: 0.5rem; }
+  .site-header nav { gap: 1rem; font-size: 0.9rem; }
+  .intro { padding-top: 2.6rem; }
+  .intro p { font-size: 1rem; }
+  .wide-only { display: none; }
+  .years { padding-bottom: 1.8rem; }
+  article { grid-template-columns: minmax(0, 1fr); gap: 0.6rem; margin-top: 1.5rem; }
+  article + article { margin-top: 2.8rem; padding-top: 2rem; }
+  h3 { font-size: 1.4rem; }
+  footer { display: block; }
+  footer > a { display: inline-flex; align-items: center; margin-top: 0.8rem; }
+}

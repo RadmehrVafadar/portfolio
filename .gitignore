@@ -14,6 +14,7 @@ dist-ssr
 playwright-report/
 test-results/
 .local-backups/
+**/.impeccable/review/
 *.tsbuildinfo
 
 # Editor directories and files

@@ -59,3 +59,20 @@
   from { clip-path: inset(0 100% 0 0); }
   to { clip-path: inset(0); }
 }
+
+.changelog-link {
+  position: fixed;
+  left: max(16px, env(safe-area-inset-left));
+  top: max(12px, env(safe-area-inset-top));
+  /* Projected cabinet controls must retain pointer priority on small screens. */
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #fcbd46;
+  font: 12px/1.5 'Arcade Interlaced', monospace;
+  text-underline-offset: 5px;
+}
+
+.changelog-link:hover { color: #fff0d6; }
+.changelog-link:focus-visible { outline: 2px solid #fcbd46; outline-offset: 4px; }
