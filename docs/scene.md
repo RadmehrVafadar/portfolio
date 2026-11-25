@@ -14,7 +14,8 @@ The entry point observes the document viewport and rounds the arcade root's widt
 This avoids the [WebKit transformed Html offset](https://github.com/pmndrs/drei/issues/720) that can place the iframe below the cabinet screen in mobile in-app browsers such as LinkedIn.
 The canvas and HTML projection share the adjusted size, extending less than two pixels past the viewport without changing the screen's 3D position or camera targets.
 The initial HTML displays an amber arcade loading screen using the portfolio's locally bundled Arcade Interlaced font while the scene module and cabinet model load.
-The loading screen displays Radmehr Vafadar's gold 3D RV monogram, with a smaller version used as the arcade favicon.
+The loading screen displays Radmehr Vafadar's gold 3D RV monogram.
+The arcade browser tab uses a smaller version as its favicon and displays the title "Radmehr's Website".
 It clears after the portfolio iframe loads and a frame renders the cabinet, with no artificial delay or percentage.
 The loading dots stay still when reduced motion is preferred, and a Skip 3D arcade link provides direct portfolio access while loading, honoring `VITE_IFRAME_URL`.
 The floor catches the spotlight beneath the cabinet; the background has no wall or enclosing box.

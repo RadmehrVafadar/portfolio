@@ -23,6 +23,12 @@ test('arcade loading screen covers deferred scene and model loading @webgl', asy
   await page.emulateMedia({ reducedMotion: 'reduce' });
   try {
     await page.goto('/', { waitUntil: 'domcontentloaded' });
+    await expect(page).toHaveTitle("Radmehr's Website");
+    const favicon = page.locator('link[rel="icon"]');
+    await expect(favicon).toHaveAttribute('href', /\/rv-icon(?:-[\w-]+)?\.png$/);
+    const iconResponse = await page.request.get(await favicon.evaluate(link => link.href));
+    expect(iconResponse.ok()).toBe(true);
+    expect(iconResponse.headers()['content-type']).toContain('image/png');
     const loading = page.getByRole('status');
     const logo = page.getByRole('img', { name: 'Radmehr Vafadar' });
     await expect(logo).toBeVisible();
